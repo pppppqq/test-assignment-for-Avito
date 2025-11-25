@@ -57,7 +57,7 @@ def test_create_item_returns_proper_structure(base_url, seller_id, random_item_n
 @pytest.mark.parametrize("payload", [
     {"name": "test", "price": 500},                  # без sellerId
     {"sellerId": 123, "price": 500},                 # без name
-    {"sellerId": 123, "name": "test"},              # без price
+    {"sellerId": 123, "name": "test"},               # без price
 ])
 def test_create_item_missing_fields(base_url, payload):
     """Проверяет создание элемента с отсутствующими обязательными полями.
