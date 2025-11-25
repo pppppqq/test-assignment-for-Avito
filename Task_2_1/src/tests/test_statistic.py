@@ -11,8 +11,6 @@ def test_get_item_statistic(base_url, create_test_item_for_delete):
     2. Выполняется GET-запрос к /api/2/statistic/{item_id}.
     3. Проверяется, что код ответа 200.
     4. Проверяется, что в ответе присутствуют ключи: 'likes', 'viewCount', 'contacts'.
-
-    Пометка xfail: тест отмечен как ожидаемо падающий из-за бага с некорректным телом ответа.
     """
     item_id = create_test_item_for_delete["id"]
     response = requests.get(f"{base_url}/api/2/statistic/{item_id}")
